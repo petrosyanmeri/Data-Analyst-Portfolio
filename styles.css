@@ -22,7 +22,7 @@ header {
     background-color: #333;
     color: white;
     padding: 20px 0;
-    text-align: center;
+    text-align: left;
 }
 
 header h1 {
@@ -35,7 +35,7 @@ header nav ul {
     padding: 0;
     margin: 0;
     display: flex;  /* Flexbox for horizontal layout */
-    justify-content: center; 
+    justify-content: right; 
     flex-wrap: wrap; /* Wrap items to a new line if necessary (mobile-friendly) */
 }
 
