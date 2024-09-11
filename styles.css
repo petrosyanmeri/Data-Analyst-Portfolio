@@ -1,5 +1,5 @@
 /* Reset */
-body, h1, h2, p, ul {
+body, h1, h2, p, ul {box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
