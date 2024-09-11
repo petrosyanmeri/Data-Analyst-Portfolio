@@ -1,5 +1,5 @@
 /* Reset */
-body, h1, h2, p, ul {
+body, h1, h2, p, ul, li {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -22,51 +22,35 @@ header {
     background-color: #333;
     color: white;
     padding: 20px 0;
-}
-
-header .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    text-align: center;
 }
 
 header h1 {
     font-size: 24px;
+    margin-bottom: 20px;
 }
 
-/* Responsive Navigation */
 header nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
+    display: flex;  /* Flexbox for horizontal layout */
+    justify-content: flex-start; /* Align links to the left */
+    flex-wrap: wrap; /* Wrap items to a new line if necessary (mobile-friendly) */
 }
 
-/* For larger screens (desktop view) */
-@media (min-width: 769px) {
-    header nav ul {
-        display: flex; /* Side by side on larger screens */
-        justify-content: center; /* Center the nav links */
-    }
-
-    header nav ul li {
-        margin-left: 20px;
-    }
-
-    header nav ul li:first-child {
-        margin-left: 0; /* Remove left margin for the first item */
-    }
+header nav ul li {
+    margin: 0 15px; /* Add some space between the navigation items */
 }
 
-/* For mobile (small screens) */
-@media (max-width: 768px) {
-    header nav ul {
-        display: block; /* Stack items vertically */
-        text-align: center; /* Center the links */
-    }
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
 
-    header nav ul li {
-        margin: 10px 0; /* Space between links */
-    }
+header nav ul li a:hover {
+    text-decoration: underline;
 }
 
 /* Section styles */
@@ -82,40 +66,16 @@ section h2 {
 
 /* Projects */
 .project {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centers image horizontally */
-    text-align: center;   /* Centers text */
     margin-bottom: 20px;
+    text-align: left; /* Keep text left-aligned */
 }
 
 .project img {
-    max-width: 100%; /* Ensures image is responsive */
+    display: block;
+    margin: 0 auto; /* Center the image horizontally */
+    max-width: 100%; /* Ensure the image is responsive */
     height: auto;
-    margin-bottom: 20px; /* Space between image and text */
-}
-
-.project h3 {
-    font-size: 20px;
-}
-
-.project p {
-    margin-bottom: 10px;
-}
-
-.project a {
-    color: #333;
-    text-decoration: underline;
-}
-
-/* Skills */
-ul {
-    list-style: none;
-    padding: 0;
-}
-
-ul li {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 /* Footer */
@@ -126,18 +86,14 @@ footer {
     padding: 20px 0;
 }
 
-/* Responsive Adjustments */
+/* Media Queries for Responsive Design */
 @media (max-width: 768px) {
-    .container {
-        padding: 10px;
+    header nav ul {
+        display: block;  /* Stack links vertically on mobile */
+        text-align: left; /* Keep links aligned to the left */
     }
 
-    section {
-        padding: 20px;
-    }
-    
-    .project img {
-        max-width: 100%;
-        height: auto;
+    header nav ul li {
+        margin: 10px 0;  /* Add space between stacked items */
     }
 }
