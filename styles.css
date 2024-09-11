@@ -35,7 +35,7 @@ header nav ul {
     padding: 0;
     margin: 0;
     display: flex;  /* Flexbox for horizontal layout */
-    justify-content: flex-start; /* Align links to the left */
+    justify-content: center; 
     flex-wrap: wrap; /* Wrap items to a new line if necessary (mobile-friendly) */
 }
 
