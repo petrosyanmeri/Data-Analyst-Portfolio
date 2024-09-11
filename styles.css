@@ -34,23 +34,39 @@ header h1 {
     font-size: 24px;
 }
 
+/* Responsive Navigation */
 header nav ul {
     list-style: none;
-    display: flex;
+    padding: 0;
+    margin: 0;
 }
 
-header nav ul li {
-    margin-left: 20px;
+/* For larger screens (desktop view) */
+@media (min-width: 769px) {
+    header nav ul {
+        display: flex; /* Side by side on larger screens */
+        justify-content: center; /* Center the nav links */
+    }
+
+    header nav ul li {
+        margin-left: 20px;
+    }
+
+    header nav ul li:first-child {
+        margin-left: 0; /* Remove left margin for the first item */
+    }
 }
 
-header nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-}
+/* For mobile (small screens) */
+@media (max-width: 768px) {
+    header nav ul {
+        display: block; /* Stack items vertically */
+        text-align: center; /* Center the links */
+    }
 
-header nav ul li a:hover {
-    text-decoration: underline;
+    header nav ul li {
+        margin: 10px 0; /* Space between links */
+    }
 }
 
 /* Section styles */
@@ -110,23 +126,8 @@ footer {
     padding: 20px 0;
 }
 
-/* Responsive Design */
+/* Responsive Adjustments */
 @media (max-width: 768px) {
-    header .container {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    header nav ul {
-        flex-direction: column;
-        margin-top: 10px;
-    }
-
-    header nav ul li {
-        margin-left: 0;
-        margin-bottom: 10px;
-    }
-
     .container {
         padding: 10px;
     }
@@ -134,7 +135,7 @@ footer {
     section {
         padding: 20px;
     }
-
+    
     .project img {
         max-width: 100%;
         height: auto;
