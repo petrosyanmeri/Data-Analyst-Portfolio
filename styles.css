@@ -1,10 +1,11 @@
 /* Reset */
-body, h1, h2, h3, p, ul, li {
+body, h1, h2, h3, p, ul, li, a {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
+/* Base styles */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
@@ -63,43 +64,108 @@ section {
 
 section h2 {
     font-size: 28px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     color: #222;
 }
 
-/* Projects */
+/* Project block */
 .project {
     background-color: white;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
     padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    text-align: left;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
-.project:nth-child(even) {
-    background-color: #f0f0f0;
-}
-
+/* Project image */
 .project img {
-    display: block;
-    margin: 0 auto 20px;
     max-width: 100%;
     height: auto;
-    border-radius: 8px;
+    border-radius: 12px;
+    display: block;
+    margin: 0 auto;
 }
 
+/* Project title */
 .project h3 {
     font-size: 22px;
-    margin-bottom: 15px;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+/* Project text */
+.project p,
+.project li {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #444;
+}
+
+/* Section subheadings inside project */
+.project b {
+    display: inline-block;
+    margin-top: 15px;
+    font-size: 16px;
     color: #333;
 }
 
-.project p {
+/* Project "See More" link */
+.project a {
     font-size: 16px;
-    line-height: 1.5;
-    color: #444;
+    font-weight: 600;
+    color: purple;
+    text-decoration: none;
+    margin-bottom: 10px;
 }
+
+.project a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header nav ul {
+        display: block;
+        text-align: left;
+    }
+
+    header nav ul li {
+        margin: 10px 0;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    section {
+        padding: 20px 0;
+    }
+
+    .project {
+        padding: 15px;
+    }
+
+    .project h3 {
+        font-size: 20px;
+    }
+
+    .project p {
+        font-size: 15px;
+    }
+}
+
 
 /* Footer */
 footer {
