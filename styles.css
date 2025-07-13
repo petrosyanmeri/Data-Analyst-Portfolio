@@ -1,5 +1,5 @@
 /* Reset */
-body, h1, h2, p, ul, li {
+body, h1, h2, h3, p, ul, li {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -8,6 +8,8 @@ body, h1, h2, p, ul, li {
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
+    background-color: #f5f5f5;
+    color: #333;
 }
 
 /* Container */
@@ -34,13 +36,13 @@ header nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
-    display: flex;  /* Flexbox for horizontal layout */
-    justify-content: right; 
-    flex-wrap: wrap; /* Wrap items to a new line if necessary (mobile-friendly) */
+    display: flex;
+    justify-content: right;
+    flex-wrap: wrap;
 }
 
 header nav ul li {
-    margin: 0 15px; /* Add some space between the navigation items */
+    margin: 0 15px;
 }
 
 header nav ul li a {
@@ -56,38 +58,47 @@ header nav ul li a:hover {
 /* Section styles */
 section {
     padding: 40px 0;
-    background-color: #e0e0e0;
     margin-bottom: 20px;
 }
 
 section h2 {
+    font-size: 28px;
     margin-bottom: 20px;
+    color: #222;
 }
 
 /* Projects */
 .project {
-    margin-bottom: 20px;
-    text-align: left; /* Keep text left-aligned */
+    background-color: white;
+    margin-bottom: 30px;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.project:nth-child(even) {
+    background-color: #f0f0f0;
 }
 
 .project img {
     display: block;
-    margin: 0 auto; /* Center the image horizontally */
-    max-width: 100%; /* Ensure the image is responsive */
+    margin: 0 auto 20px;
+    max-width: 100%;
     height: auto;
-    margin-bottom: 20px;
-}
-.project {
-    margin-bottom: 20px;
-    text-align: left; /* Keep text left-aligned */
+    border-radius: 8px;
 }
 
-.project img {
-    display: block;
-    margin: 0 auto; /* Center the image horizontally */
-    max-width: 100%; /* Ensure the image is responsive */
-    height: auto;
-    margin-bottom: 20px;
+.project h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.project p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #444;
 }
 
 /* Footer */
@@ -96,16 +107,26 @@ footer {
     color: white;
     text-align: center;
     padding: 20px 0;
+    margin-top: 40px;
 }
 
 /* Media Queries for Responsive Design */
 @media (max-width: 768px) {
     header nav ul {
-        display: block;  /* Stack links vertically on mobile */
-        text-align: left; /* Keep links aligned to the left */
+        display: block;
+        text-align: left;
     }
 
     header nav ul li {
-        margin: 10px 0;  /* Add space between stacked items */
+        margin: 10px 0;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    section {
+        padding: 20px 0;
     }
 }
+
